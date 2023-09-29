@@ -1,0 +1,56 @@
+.app_home {
+  width: 100%;
+  margin: 0 auto;
+
+  @media screen and (min-width: 576px) {
+    max-width: 90%;
+  }
+
+  &_header {
+    &_inner {
+      @include flex_center();
+      justify-content: space-between;
+      gap: 5rem;
+    }
+
+    &_left {
+      @include flex_center();
+      gap: 0.5rem;
+
+      img {
+        width: 2.5rem;
+        aspect-ratio: 1/1;
+
+        @media screen and (min-width: 576px) {
+          width: 3.5rem;
+        }
+      }
+    }
+
+    &_right {
+      &_inner {
+        @include flex_center();
+        gap: 0.5rem;
+
+        .user {
+          &_image {
+            width: 2.5rem;
+            aspect-ratio: 1/1;
+
+            @media screen and (min-width: 576px) {
+              width: 3rem;
+            }
+          }
+
+          &_name {
+            display: none;
+            @media screen and (min-width: 576px) {
+              @include flex_center();
+            }
+            gap: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
