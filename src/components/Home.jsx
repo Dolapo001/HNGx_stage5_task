@@ -1,8 +1,7 @@
-import { Fragment, useState, useEffect } from "react";
+import { Fragment } from "react";
 import Headroom from "react-headroom";
 import { Helmet } from "react-helmet";
-import { motion } from "framer-motion";
-import Logo from "../assets/logo.svg";
+// import { motion } from "framer-motion";
 import Grandma from "../assets/grandma.svg";
 import KidAndFather from "../assets/kidandfather.svg";
 import PrettyLady from "../assets/prettylady.svg";
@@ -19,22 +18,10 @@ import Rec from "../assets/rec.jpg";
 import Icon from "@mdi/react";
 import { mdiArrowRightThin } from "@mdi/js";
 import Footer from "../components/Footer";
+import Header from "./Header";
 
 export default function Home() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  
 
   return (
     <Fragment>
@@ -44,28 +31,7 @@ export default function Home() {
 
       <div className={`font-sora `}>
         <Headroom>
-          <header
-            className={`flex justify-between md:px-[80px] px-16 py-6 border-b text-[13px] ${
-              isScrolled ? "bg-black/50" : ""
-            }`}
-          >
-            <img src={Logo} alt="Logo" />
-            <div className="flex pt-4 font-bold">
-              <p className="cursor-pointer hidden md:block">Feature</p>
-              <p className="pl-8 cursor-pointer hidden md:block">How It Works</p>
-            </div>
-            <button className="text-[#120b48] font-bold hidden md:block hover:shadow-lg hover:duration-700 hover:bg-black/30 rounded-xl p-4 px-8 ">
-              Get Started
-            </button>
-
-            <div className="relative z-10">
-                <motion.button className="pt-3">
-                        <span className="w-5 sm:w-9 h-px bg-black block md:none"></span>
-                        <span className="w-5 sm:w-9 h-px mt-2 bg-black block md:none"></span>
-                        <span className="w-5 sm:w-9 h-px mt-2 bg-black block md:none"></span>
-                </motion.button>
-            </div>
-          </header>
+          <Header />
         </Headroom>
 
         <main className="">
@@ -119,7 +85,7 @@ export default function Home() {
 
           <div className="md:px-[80px] px-16 pt-20 pb-[70px] border-b border-b-[30px]">
             <div className="text-center">
-              <p className="text-[#141414] sm:text-4xl text-2xl pb-8 font-bold ">
+              <p id="features" className="text-[#141414] sm:text-4xl text-2xl pb-8 font-bold ">
                 Features
               </p>
               <p className="text-[#535353] pb-20 ">
@@ -179,7 +145,7 @@ export default function Home() {
           </div>
 
           <div className="md:px-[80px] px-16 py-[70px]">
-            <h3 className="text-[#120b48] text-2xl sm:text-3xl text-center pb-[50px] font-bold">
+            <h3 id="work" className="text-[#120b48] text-2xl sm:text-3xl text-center pb-[50px] font-bold">
               How It Works
             </h3>
             <div className="md:grid md:grid-cols-3 md:gap-10">
