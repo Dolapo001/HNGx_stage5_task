@@ -29,30 +29,9 @@ export default function Home() {
 
       <div className={`font-sora `}>
         <Headroom>
-          <header
-            className={`flex justify-between md:px-[80px] px-16 py-6 border-b text-[13px] ${
-              isScrolled ? "bg-black/50" : ""
-            }`}
-          >
-            <img src={Logo} alt="Logo" />
-            <div className="flex pt-4 font-bold">
-              <p className="cursor-pointer hidden md:block">Feature</p>
-              <p className="pl-8 cursor-pointer hidden md:block">
-                How It Works
-              </p>
-            </div>
-            <button className="text-[#120b48] font-bold hidden md:block hover:shadow-lg hover:duration-700 hover:bg-black/30 rounded-xl p-4 px-8 ">
-              Get Started
-            </button>
 
-            <div className="relative z-10">
-              <motion.button className="pt-3">
-                <span className="w-5 sm:w-9 h-px bg-black block md:none"></span>
-                <span className="w-5 sm:w-9 h-px mt-2 bg-black block md:none"></span>
-                <span className="w-5 sm:w-9 h-px mt-2 bg-black block md:none"></span>
-              </motion.button>
-            </div>
-          </header>
+          <Header />
+
         </Headroom>
 
         <main className="">
