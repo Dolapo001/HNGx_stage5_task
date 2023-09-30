@@ -80,6 +80,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+
           <div className="md:px-[80px] px-16 pt-20 pb-[70px] border-b border-b-[30px]">
             <div className="text-center">
               <p
@@ -188,11 +189,6 @@ export default function Home() {
                 </p>
                 <img src={Rec} alt="Rec Image" />
               </div>
-          <div className="pt-">
-            <div>
-              <p>Features</p>
-              <p>Key Highlights of Our Extension</p>
-
             </div>
           </div>
         </main>
