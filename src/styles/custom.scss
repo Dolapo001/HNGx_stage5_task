@@ -12,3 +12,60 @@ ul {
   list-style: none;
   outline: none;
 }
+
+/* APP_HOME_HEADER STYLES */
+.app_home {
+  &_header {
+    &_inner {
+      @include flex_center();
+      justify-content: space-between;
+      gap: 5rem;
+    }
+
+    &_left {
+      @include flex_center();
+      gap: 0.5rem;
+      color: $dark_blue;
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+
+      img {
+        width: 2.5rem;
+        aspect-ratio: 1/1;
+
+        @media screen and (min-width: 576px) {
+          width: 3.5rem;
+        }
+      }
+    }
+
+    &_right {
+      &_inner {
+        @include flex_center();
+        gap: 0.5rem;
+        cursor: pointer;
+
+        .user {
+          &_image {
+            width: 2.5rem;
+            aspect-ratio: 1/1;
+
+            @media screen and (min-width: 576px) {
+              width: 3rem;
+            }
+          }
+
+          &_name {
+            display: none;
+            @media screen and (min-width: 576px) {
+              @include flex_center();
+            }
+            gap: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
