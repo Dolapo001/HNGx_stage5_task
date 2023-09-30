@@ -77,10 +77,10 @@ export default function Home() {
           </div>
 
           <div className="pt-">
-                <div>
-                        <p>Features</p>
-                        <p>Key Highlights of Our Extension</p>
-                </div>
+            <div>
+              <p>Features</p>
+              <p>Key Highlights of Our Extension</p>
+            </div>
           </div>
         </main>
       </div>
