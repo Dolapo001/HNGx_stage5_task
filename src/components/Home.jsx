@@ -29,9 +29,7 @@ export default function Home() {
 
       <div className={`font-sora `}>
         <Headroom>
-
           <Header />
-
         </Headroom>
 
         <main className="">
