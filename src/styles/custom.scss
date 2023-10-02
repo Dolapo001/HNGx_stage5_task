@@ -410,3 +410,63 @@ input {
     margin: 0 auto;
   }
 }
+
+/* VIDEOLINK STYLES*/
+.videolink {
+  &_sec {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.32);
+  }
+  &_inner {
+    width: 100%;
+    height: fit-content;
+    background: #f1f4f7;
+    display: grid;
+    gap: 4.5rem;
+  }
+
+  &_top {
+    &_inner {
+      display: grid;
+      gap: 2.5rem;
+
+      img {
+        width: fit-content;
+      }
+
+      .x_icon {
+        position: absolute;
+        right: 2.5rem;
+      }
+
+      p {
+        color: #08051e;
+        text-align: center;
+        font-family: Work Sans;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+
+  &_bottom {
+    &_inner {
+      p {
+        color: $dark_header;
+        text-align: center;
+        font-family: Work Sans;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      button {
+        margin: 1.5rem 0 2.5rem 0;
+      }
+    }
+  }
+}

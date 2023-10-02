@@ -246,3 +246,25 @@
   border: 1px solid #cfcfcf;
   color: #9d9d9d;
 }
+
+// CENTER_ELEMENT
+
+.center_element {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 26rem;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  padding-bottom: 5rem;
+  margin: 0.5rem;
+
+  @media screen and (min-width: 768px) {
+  padding: 1.5rem;
+  }
+}
