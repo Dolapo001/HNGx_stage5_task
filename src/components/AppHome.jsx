@@ -55,7 +55,7 @@ const AppHome = () => {
                           placeholder="enter email of receiver"
                         />
 
-                        <span className="inputs_btn_send">send</span>
+                        <span className="btn_send">send</span>
                       </div>
                       {/* INPUT FOR VIDEO URL */}
                       <div className="video_url">
@@ -65,36 +65,15 @@ const AppHome = () => {
                           value={`https://www.helpmeout/Untitled_Video_20232509`}
                         />
 
-                        <span className="inputs_btn_copy">
+                        <span className="btn_copy">
                           <img src={copy_icon} alt="copy_icon" />
                           <span>Copy URL</span>
                         </span>
                       </div>
                     </div>
                   </div>
-
-                  <div className="share_video_sec">
-                    <div className="share_video_inner">
-                      <h5>Share your video </h5>
-
-                      <div className="action_btns">
-                        <button>
-                          <img src={fb_icon} alt="social_icon" />
-
-                          <span>Facebook</span>
-                        </button>
-                        <button>
-                          <img src={whatsapp_icon} alt="social_icon" />
-                          <span>WhatsApp</span>
-                        </button>
-                        <button>
-                          <img src={telegram_icon} alt="social_icon" />
-
-                          <span>Telegram</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                  {/* SHARE SECS */}
+                  <ShareSec />
 
                   <div className="transcript_sec">
                     <div className="transcript_inner">
@@ -177,3 +156,32 @@ const AppHome = () => {
 };
 
 export default AppHome;
+
+export const ShareSec = () => {
+  return (
+    <>
+      <div className="share_video_sec">
+        <div className="share_video_inner">
+          <h5>Share your video </h5>
+
+          <div className="action_btns">
+            <button>
+              <img src={fb_icon} alt="social_icon" />
+
+              <span>Facebook</span>
+            </button>
+            <button>
+              <img src={whatsapp_icon} alt="social_icon" />
+              <span>WhatsApp</span>
+            </button>
+            <button>
+              <img src={telegram_icon} alt="social_icon" />
+
+              <span>Telegram</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
