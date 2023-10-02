@@ -11,3 +11,5 @@ export { default as telegram_icon } from "../assets/telegram_icon.svg";
 export { default as link_icon } from "../assets/link_icon.svg";
 export { default as more_icon } from "../assets/more_icon.svg";
 export { default as video_ready_img } from "../assets/video_ready_img.svg";
+export { default as kite_icon } from "../assets/kite_icon.svg";
+export { default as close_icon } from "../assets/close_icon.svg";
