@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { logo, logo_white } from "../lib/image";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
@@ -33,11 +34,13 @@ export default function Header() {
     >
       <div className="nav_inner relative container_main">
         <div className="nav_left">
-          {isNavbarFixed ? (
-            <img src={logo_white} alt="Logo" className="w-40" />
-          ) : (
-            <img src={logo} alt="Logo" />
-          )}
+          <Link to="/">
+            {isNavbarFixed ? (
+              <img src={logo_white} alt="Logo" className="w-40" />
+            ) : (
+              <img src={logo} alt="Logo" />
+            )}
+          </Link>
         </div>
         <div className="nav_middle">
           <div className="nav_middle_inner">
@@ -53,15 +56,17 @@ export default function Header() {
         </div>
         <div className="nav_right">
           <div className="nav_right_inner">
-            <button
-              className={`${
-                isNavbarFixed
-                  ? "bg-[#fff] text-black"
-                  : "bg-[#120b48] text-white"
-              } font-bold  hover:duration-700 rounded-xl p-4 px-8`}
-            >
-              Get Started
-            </button>{" "}
+            <Link to={"/webhome"}>
+              <button
+                className={`${
+                  isNavbarFixed
+                    ? "bg-[#fff] text-black"
+                    : "bg-[#120b48] text-white"
+                } font-bold  hover:duration-700 rounded-xl p-4 px-8`}
+              >
+                Get Started
+              </button>{" "}
+            </Link>
           </div>
         </div>
         <div className="md:hidden pt-4">

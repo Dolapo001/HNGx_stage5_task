@@ -1,15 +1,16 @@
 import { BsChevronDown } from "react-icons/bs";
 import { logo_icon, placeholder_img } from "../lib/image";
+import { Link } from "react-router-dom";
 
 export const AppHomeHeader = () => {
   return (
     <>
-      <div className="app_home_header">
+      <div className="app_home_header container_main">
         <div className="app_home_header_inner">
-          <div className="app_home_header_left">
+          <Link className="app_home_header_left" to={"/"}>
             <img src={logo_icon} alt="logo" />
             <span>HelpMeOut</span>
-          </div>
+          </Link>
 
           <div className="app_home_header_right">
             <div className="app_home_header_right_inner">
