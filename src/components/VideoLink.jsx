@@ -27,8 +27,9 @@ export const VideoLink = () => {
                 Would you need to view this video later? Save to your account
                 now!
               </p>
-
-              <button className="btn_save">Save Video</button>
+              <Link to={"/webhome"}>
+                <button className="btn_save">Save Video</button>
+              </Link>
 
               <p>
                 <span className="text-[#7E7E7E] ">
